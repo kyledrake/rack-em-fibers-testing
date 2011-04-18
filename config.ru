@@ -1,3 +1,3 @@
-require './test_app.rb'
+require './app.rb'
 use Rack::FiberPool
-run TestApp
+run App

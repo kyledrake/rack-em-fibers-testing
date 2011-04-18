@@ -1,10 +1,10 @@
-require './test_app.rb'
+require './app.rb'
 Bundler.require :test
 require 'minitest/autorun'
 
-describe TestApp do
+describe App do
   include Rack::Test::Methods
-  def app; TestApp end
+  def app; App end
 
   describe 'any request' do
     it 'returns google.com with EM' do
