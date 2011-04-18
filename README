@@ -1,0 +1,24 @@
+~/code/async/rack-em-fibers-testing $ be ruby test.rb 
+Loaded suite test
+Started
+E
+Finished in 0.021999 seconds.
+
+  1) Error:
+test_0001_returns_google_com_with_em(AppSpec::AnyRequestSpec):
+RuntimeError: eventmachine not initialized: evma_connect_to_server
+    /Users/vmalloc/.rvm/gems/ruby-1.9.2-p180@rack_fiber_pool_test_app/gems/eventmachine-0.12.10/lib/eventmachine.rb:714:in `connect_server'
+    /Users/vmalloc/.rvm/gems/ruby-1.9.2-p180@rack_fiber_pool_test_app/gems/eventmachine-0.12.10/lib/eventmachine.rb:714:in `bind_connect'
+    /Users/vmalloc/.rvm/gems/ruby-1.9.2-p180@rack_fiber_pool_test_app/gems/eventmachine-0.12.10/lib/eventmachine.rb:692:in `connect'
+    /Users/vmalloc/.rvm/gems/ruby-1.9.2-p180@rack_fiber_pool_test_app/gems/em-http-request-0.3.0/lib/em-http/request.rb:61:in `send_request'
+    /Users/vmalloc/.rvm/gems/ruby-1.9.2-p180@rack_fiber_pool_test_app/gems/em-http-request-0.3.0/lib/em-http/request.rb:56:in `setup_request'
+    /Users/vmalloc/.rvm/gems/ruby-1.9.2-p180@rack_fiber_pool_test_app/gems/em-http-request-0.3.0/lib/em-http/request.rb:46:in `get'
+    /Users/vmalloc/code/async/rack-em-fibers-testing/app.rb:6:in `call'
+    /Users/vmalloc/.rvm/gems/ruby-1.9.2-p180@rack_fiber_pool_test_app/gems/rack-test-0.5.6/lib/rack/mock_session.rb:30:in `request'
+    /Users/vmalloc/.rvm/gems/ruby-1.9.2-p180@rack_fiber_pool_test_app/gems/rack-test-0.5.6/lib/rack/test.rb:209:in `process_request'
+    /Users/vmalloc/.rvm/gems/ruby-1.9.2-p180@rack_fiber_pool_test_app/gems/rack-test-0.5.6/lib/rack/test.rb:57:in `get'
+    test.rb:11:in `block (3 levels) in <main>'
+
+1 tests, 0 assertions, 0 failures, 1 errors, 0 skips
+
+Test run options: --seed 23463
