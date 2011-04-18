@@ -8,7 +8,7 @@ describe App do
 
   describe 'any request' do
     it 'returns google.com with EM' do
-      get '/get_google'
+      get '/'
       last_response.status.must_equal 200
       (last_response.body.length > 0).must_equal true
     end
